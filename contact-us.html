@@ -1,0 +1,108 @@
+<! doctype html>
+<html>
+<head>
+    <title> Contact Us </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: blue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: blue;
+        }
+
+
+        .container {
+            border-radius: 5px;
+            background-color: #ffb380;
+            padding: 10px;
+        }
+
+        /* Create two columns that float next to eachother */
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column, input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+<header></header>
+<div class="container">
+    <div style="text-align:center">
+
+        <h2>Contact Us</h2>
+        <p>Do you have a Comment or Suggestion? Please leave us a message</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="/w3images/map.jpg" style="width:100%">
+        </div>
+        <div class="column">
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <label for="county">County</label>
+                <select id="county" name="county">
+                    <option value="Nairobi">Nairobi</option>
+                    <option value="Mombasa">Mombasa</option>
+                    <option value="Kiambu">Kiambu</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <img src="https://ksnmedia.com/wp-content/uploads/2020/05/b2a50372-447f-4576-9028-e62f0078e037.jpg">
+</div>
+
+
+</body>
+
+</html>
